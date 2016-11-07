@@ -2,7 +2,7 @@ package com.jtsw.sharedfloor.model;
 
 import java.util.Comparator;
 
-public class Expense implements Comparable<Expense>{
+public class Expense{
 
     private Home home;//the home of the expense
 
@@ -58,11 +58,11 @@ public class Expense implements Comparable<Expense>{
         this.paid=paid;
         this.home=homeE;
     }
-    @Override
-    public int compareTo(Expense expense) {
-        int res=0;
 
-        //comparacion de precios
-        return res;
-    }
+    public static final Comparator<Expense> AMOUNT_COMPARATOR= new Comparator<Expense>() {
+        @Override
+        public int compare(Expense expense1, Expense expense2) {
+            return Double.compare(expense1.getAmount(),expense2.getAmount());
+        }
+    };
 }

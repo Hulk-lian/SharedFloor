@@ -3,10 +3,13 @@ package com.jtsw.sharedfloor;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.jtsw.sharedfloor.adapter.ExpenseAdapter;
 
@@ -23,10 +26,12 @@ public class Gastos_fragment extends Fragment {
     //result of add
     //1 all ok
     //0 something was wrong
+    //para el testeo
     private final static  int RES_ADD=0;
-
-
     private ExpenseAdapter expenseAdapter;
+    ListView expenseList;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,15 +73,25 @@ public class Gastos_fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        expenseAdapter= new ExpenseAdapter(this.getContext());
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gastos_fragment, container, false);
+     // return inflater.inflate(R.layout.fragment_gastos_fragment, container, false);
+
+        //test code
+        //no funciona pero ahi esta
+        View view=inflater.inflate(R.layout.expense_expense_item,container,false);
+        expenseList=(ListView)view.findViewById(android.R.id.list);
+        expenseAdapter=new ExpenseAdapter(view.getContext());
+        expenseList.setAdapter(expenseAdapter);
+
+        return view;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

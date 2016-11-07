@@ -20,7 +20,7 @@ public class ExpenseAdapter extends ArrayAdapter<Expense> {
     Context context;
     List<Expense> expenseList;
     public ExpenseAdapter(Context context){
-        super(context, R.layout.expense_expense_ITEM, Expense_listExpenses.getExpenseslist());
+        super(context, R.layout.expense_expense_item, Expense_listExpenses.getExpenseslist());
         this.context=context;
         expenseList=Expense_listExpenses.getExpenseslist();
     }
@@ -47,7 +47,7 @@ public class ExpenseAdapter extends ArrayAdapter<Expense> {
             LayoutInflater inflater=(LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             //inflate the view
-            item=inflater.inflate(R.layout.expense_expense_ITEM,null);
+            item=inflater.inflate(R.layout.expense_expense_item,null);
 
             //memory for the holder
             expenseHolder= new ExpenseHolder();

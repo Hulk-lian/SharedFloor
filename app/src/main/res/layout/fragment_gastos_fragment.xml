@@ -2,9 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jtsw.sharedfloor.Gastos_fragment"
-    android:background="@color/colorPrimaryDark">
-    <!-- Color chusquero para testeos-->
+    tools:context="com.jtsw.sharedfloor.Gastos_fragment">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/expenseRCVexpense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
 
 
 </FrameLayout>

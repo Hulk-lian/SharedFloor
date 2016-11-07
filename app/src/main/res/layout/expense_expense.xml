@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/expenseTXVNameExp"
+    android:text="Nombre gasto"
+    android:textSize="@dimen/expense_txv_text_primary_size"
+    android:layout_margin="@dimen/expense_txv_margin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expenseTXVamount"
+        android:text="78,88"
+        android:textSize="@dimen/expense_txv_text_primary_size"
+        android:layout_toRightOf="@id/expenseTXVNameExp"
+        android:layout_alignBaseline="@+id/expenseTXVNameExp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expenseTXVforeignExchange"
+        android:text="@string/EUR"
+        android:layout_toRightOf="@id/expenseTXVamount"
+        android:textSize="@dimen/expense_txv_text_primary_size"
+    android:layout_alignBaseline="@+id/expenseTXVNameExp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expense_txv_textPaid"
+        android:text="@string/expense_paid"
+        android:textSize="@dimen/expense_txv_secondary_size"
+        android:layout_below="@id/expenseTXVNameExp"
+        android:layout_alignStart="@id/expenseTXVNameExp"
+        android:layout_alignLeft="@+id/expenseTXVNameExp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expenseTXVWhoPaid"
+        android:text="@string/expense_who_paid"
+        android:textSize="@dimen/expense_txv_secondary_size"
+        android:layout_alignBaseline="@+id/expense_txv_textPaid"
+        android:layout_toRightOf="@id/expense_txv_textPaid"
+        android:layout_marginLeft="@dimen/expense_txv_who_paid"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expense_txv_textPerUser"
+        android:text="@string/expense_per_user_paid_text"
+        android:layout_alignBaseline="@+id/expense_txv_textPaid"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/expense_txv_secondary_size"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expenseTXVPricePerUser"
+        android:text="20"
+        android:layout_alignBaseline="@+id/expense_txv_textPaid"
+        android:layout_toLeftOf="@+id/expense_txv_textPerUser"
+        android:textSize="@dimen/expense_txv_secondary_size"
+        android:layout_marginRight="@dimen/expense_txv_margin"
+        />
+
+</RelativeLayout>

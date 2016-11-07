@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">Shared Floor</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!--  -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_selector_fragments_">Shared Floor</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_selector">Shared Floor</string>
+
+    <!-- expenses -->
+    <string name="expense_paid">Pagó:</string>
+    <string name="expense_for_user">Por persona</string>
+    <string name="expense_who_paid">Casero</string>
+    <string name="expense_per_user_paid_text">Por persona</string>
+
 </resources>

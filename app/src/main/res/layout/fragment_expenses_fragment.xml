@@ -2,11 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jtsw.sharedfloor.Gastos_fragment">
+    tools:context="com.jtsw.sharedfloor.Expenses_fragment">
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-    android:id="@android:id/list"/>
+        android:id="@+id/listw"/>
 
 </FrameLayout>

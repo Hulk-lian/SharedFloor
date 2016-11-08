@@ -19,10 +19,11 @@ public class ExpenseAdapter extends ArrayAdapter<Expense> {
 
     Context context;
     List<Expense> expenseList;
+
     public ExpenseAdapter(Context context){
         super(context, R.layout.expense_expense_item, Expense_listExpenses.getExpenseslist());
         this.context=context;
-        expenseList=Expense_listExpenses.getExpenseslist();
+       // expenseList=Expense_listExpenses.getExpenseslist();
     }
 
     public void order(int orderType){
@@ -58,6 +59,7 @@ public class ExpenseAdapter extends ArrayAdapter<Expense> {
             expenseHolder.txvwhopaindExp=(TextView)item.findViewById(R.id.expenseTXVWhoPaid);
             expenseHolder.txvpriceperuserExp=(TextView)item.findViewById(R.id.expenseTXVPricePerUser);
 
+            item.setTag(expenseHolder);
         }
         else{
             expenseHolder=(ExpenseHolder)item.getTag();

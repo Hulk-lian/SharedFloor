@@ -29,7 +29,6 @@ public class Expenses_fragment extends ListFragment {
     //para el testeo
     private final static  int RES_ADD=0;
     private ExpenseAdapter expenseAdapter;
-    ListView expenseList;
 
 
 
@@ -84,8 +83,8 @@ public class Expenses_fragment extends ListFragment {
      // return inflater.inflate(R.layout.fragment_Expenses_fragment, container, false);
 
         //test code
-        View view=inflater.inflate(R.layout.expense_expense_item,container,false);
-        expenseList=(ListView)view.findViewById(android.R.id.list);
+        View view=inflater.inflate(R.layout.fragment_expenses_fragment,container,false);
+        ListView expenseList=(ListView)view.findViewById(R.id.listw);
         expenseAdapter=new ExpenseAdapter(view.getContext());
         expenseList.setAdapter(expenseAdapter);
 

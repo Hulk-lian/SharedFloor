@@ -12,6 +12,7 @@
             android:name=".Selector_activity"
             android:label="@string/title_activity_selector"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity
             android:name=".SplashScreen.SplashScreen_activity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

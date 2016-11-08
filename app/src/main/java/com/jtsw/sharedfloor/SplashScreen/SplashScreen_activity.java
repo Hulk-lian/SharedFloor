@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.jtsw.sharedfloor.R;
 import com.jtsw.sharedfloor.Selector_activity;
+import com.jtsw.sharedfloor.login.Login_Activity;
 
 public class SplashScreen_activity extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class SplashScreen_activity extends AppCompatActivity {
 
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreen_activity.this, Selector_activity.class));
+                startActivity(new Intent(SplashScreen_activity.this,Login_Activity.class));
                 finish();
             }
         },TIME);

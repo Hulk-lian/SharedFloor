@@ -17,12 +17,12 @@ import com.jtsw.sharedfloor.adapter.ExpenseAdapter;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Gastos_fragment.OnFragmentInteractionListener} interface
+ * {@link Expenses_fragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Gastos_fragment#newInstance} factory method to
+ * Use the {@link Expenses_fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Gastos_fragment extends Fragment {
+public class Expenses_fragment extends Fragment {
     //result of add
     //1 all ok
     //0 something was wrong
@@ -44,7 +44,7 @@ public class Gastos_fragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Gastos_fragment() {
+    public Expenses_fragment() {
         // Required empty public constructor
     }
 
@@ -54,11 +54,11 @@ public class Gastos_fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Gastos_fragment.
+     * @return A new instance of fragment Expenses_fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Gastos_fragment newInstance(String param1, String param2) {
-        Gastos_fragment fragment = new Gastos_fragment();
+    public static Expenses_fragment newInstance(String param1, String param2) {
+        Expenses_fragment fragment = new Expenses_fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -81,10 +81,9 @@ public class Gastos_fragment extends Fragment {
 
 
         // Inflate the layout for this fragment
-     // return inflater.inflate(R.layout.fragment_gastos_fragment, container, false);
+     // return inflater.inflate(R.layout.fragment_Expenses_fragment, container, false);
 
         //test code
-        //no funciona pero ahi esta
         View view=inflater.inflate(R.layout.expense_expense_item,container,false);
         expenseList=(ListView)view.findViewById(android.R.id.list);
         expenseAdapter=new ExpenseAdapter(view.getContext());

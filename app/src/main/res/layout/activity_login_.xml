@@ -17,34 +17,76 @@
         app:srcCompat="@drawable/imagen_carpet_logo"
         android:id="@+id/lignIMVimgCarpet" />
 
-    <EditText
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/loginTILUsername"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="@dimen/login_edt_margin_top"
         android:layout_below="@+id/lignIMVimgCarpet"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_centerHorizontal="true">
     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textEmailAddress"
+        android:id="@+id/loginEDTusername"
+        android:hint="@string/loginEDThintUsername" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/loginTILPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_edt_margin_top"
+        android:layout_below="@+id/loginTILUsername"
+        android:layout_centerHorizontal="true"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:id="@+id/loginEDTpassword"
+            android:hint="@string/loginEDThintPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <CheckBox
+        android:text="@string/loginCHBRemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_marginTop="46dp"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_below="@+id/loginTILPassword"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/loginCHBRemember" />
 
     <Button
-        android:text="Button"
+        android:text="@string/loginBTNOK"
+        android:padding="@dimen/login_btn_padding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/loginCHBRemember"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
-        android:id="@+id/button" />
+        android:layout_marginTop="@dimen/login_btn_margin_top"
+        android:background="@drawable/btn_select"
+        android:id="@+id/loginBTNbtnOK" />
+
+    <TextView
+        android:text="@string/loginTXVlinkForget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/login_txv_margin_botton"
+        android:id="@+id/loginTXVForget" />
+
+    <TextView
+        android:text="@string/loginTXVlinkRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/loginTXVForget"
+        android:layout_alignParentRight="true"
+        android:id="@+id/loginTXVRegister"
+        />
 
 </RelativeLayout>

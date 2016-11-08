@@ -6,4 +6,6 @@
     <color name="colorNavigationBar">#009688</color>
     <color name="colorForeground">#00796b</color>
     <color name="colorSplash">#00796b</color>
+    <color name="btnPressColor"> #009688</color>
+    <color name="btnColor">#4db6ac</color>
 </resources>

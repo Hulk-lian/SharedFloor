@@ -13,5 +13,23 @@
     <string name="expense_for_user">Por persona</string>
     <string name="expense_who_paid">Casero</string>
     <string name="expense_per_user_paid_text">Por persona</string>
+    <string name="loginEDThintUsername">Usuario</string>
+    <string name="loginEDThintPassword">Contraseña</string>
+    <string name="loginCHBRemember">Recordar</string>
+    <string name="loginBTNOK">Iniciar Sesión</string>
+    <string name="loginTXVForget">Olvidé mi contraseña</string>
+    <string name="loginTXVRegister">Registrarse</string>
+
+
+    <!-- loggin links -->
+    <string name="loginTXVlinkRegister">
+        <!-- test url -->
+        <a href="https://www.google.es/">Registrarse</a>
+    </string>
+
+    <string name="loginTXVlinkForget">
+        <!-- test url -->
+        <a href="https://www.google.es/">Olvidé mi contraseña</a>
+    </string>
 
 </resources>

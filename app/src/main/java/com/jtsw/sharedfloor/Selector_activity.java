@@ -106,7 +106,8 @@ public class Selector_activity extends AppCompatActivity {
                     rootView=inflater.inflate(R.layout.fragment_home_fragment,container,false);
                     break;
                 case 2:
-                    rootView=inflater.inflate(R.layout.fragment_expenses_fragment,container,false);
+                   // rootView=inflater.inflate(R.layout.fragment_expenses_fragment,container,false);
+                    rootView=new Expenses_fragment().onCreateView(inflater,container,savedInstanceState);
                     break;
             }
             return rootView;

@@ -22,7 +22,7 @@ import com.jtsw.sharedfloor.adapter.ExpenseAdapter;
  * Use the {@link Expenses_fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Expenses_fragment extends Fragment {
+public class Expenses_fragment extends ListFragment {
     //result of add
     //1 all ok
     //0 something was wrong

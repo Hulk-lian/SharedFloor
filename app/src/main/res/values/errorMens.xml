@@ -3,5 +3,6 @@
     <string name="pass_short">Contraseña demasiado corta, ha de tener al menos 8 carácteres</string>
     <string name="empty_user">Campo del Usuario está vacío</string>
     <string name="empty_pass">Campo de Contraseña está vacio</string>
-    <string name="loginOK">Autentificación correcta</string>
+    <string name="login_error">Autentificacion Incorrecta</string>
+    <string name="user_not_found">El usuario no existe</string>
 </resources>

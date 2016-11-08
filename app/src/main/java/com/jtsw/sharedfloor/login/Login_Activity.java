@@ -40,6 +40,11 @@ public class Login_Activity extends AppCompatActivity implements ILogin.msgView 
         mtxvRegister=(TextView)findViewById(R.id.loginTXVRegister);
         mtxvForget=(TextView)findViewById(R.id.loginTXVForget);
         mbtnOk=(Button)findViewById(R.id.loginBTNbtnOK);
+        mtilPassword=(TextInputLayout)findViewById(R.id.loginTILPassword);
+        mtilUser=(TextInputLayout)findViewById(R.id.loginTILUsername);
+        medtUser=(EditText)findViewById(R.id.loginEDTusername);
+        medtPass=(EditText)findViewById(R.id.loginEDTpassword);
+        mchbRemember=(CheckBox)findViewById(R.id.loginCHBRemember);
 
         //links
         mtxvForget.setMovementMethod(LinkMovementMethod.getInstance());

@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jtsw.sharedfloor.login.Login_Activity">
-
+<!-- LIMPIAR CAMPOS CAMPOS DE TESTEO Y ACCESO RAPIDO DEL LOGGIN-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="@dimen/loginIMGVheight"
@@ -29,7 +29,10 @@
         android:layout_height="match_parent"
         android:inputType="textEmailAddress"
         android:id="@+id/loginEDTusername"
-        android:hint="@string/loginEDThintUsername" />
+        android:hint="@string/loginEDThintUsername"
+
+        android:text="Usuario"
+        />
 
     </android.support.design.widget.TextInputLayout>
 
@@ -44,9 +47,12 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:id="@+id/loginEDTpassword"
-            android:hint="@string/loginEDThintPassword" />
+            android:hint="@string/loginEDThintPassword"
+
+            android:text="UPCUOESLACLAVE"
+            />
 
     </android.support.design.widget.TextInputLayout>
 

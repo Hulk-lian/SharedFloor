@@ -1,5 +1,8 @@
 package com.jtsw.sharedfloor;
 
+import android.content.Context;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -15,7 +18,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class Selector_activity extends AppCompatActivity {
-
+//***************************************************************************************//
+    //floating buttons
+    FloatingActionButton fabTest;
+    //***********************************************************//
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -37,8 +43,6 @@ public class Selector_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selector);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -47,6 +51,49 @@ public class Selector_activity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+
+        //***************FAB TEST*************/
+        fabTest=(FloatingActionButton)findViewById(R.id.FABoptions);
+
+
+
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                mSectionsPagerAdapter.fabChange(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mSectionsPagerAdapter.fabChange(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
 
@@ -109,6 +156,15 @@ public class Selector_activity extends AppCompatActivity {
                    // rootView=inflater.inflate(R.layout.fragment_expenses_fragment,container,false);
                     rootView=new Expenses_fragment().onCreateView(inflater,container,savedInstanceState);
                     break;
+                case 3:
+                    rootView=inflater.inflate(R.layout.fragment_purchase_fragment,container,false);
+                    break;
+                case 4:
+                    rootView=inflater.inflate(R.layout.fragment_clean_fragment,container,false);
+                    break;
+                case 5:
+                    rootView=inflater.inflate(R.layout.fragment_debts_fragment,container,false);
+                    break;
             }
             return rootView;
         }
@@ -136,18 +192,39 @@ public class Selector_activity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 2 total pages.
-            return 2;
+            return 5;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "HOME";
+                    return mViewPager.getContext().getResources().getString(R.string.home_title);
                 case 1:
-                    return "EXPENSES";
+                    return mViewPager.getContext().getResources().getString(R.string.expense_title);
+                case 2:
+                    return mViewPager.getContext().getResources().getString(R.string.purchase_title);
+                case 3:
+                    return mViewPager.getContext().getResources().getString(R.string.clean_title);
+                case 4:
+                    return mViewPager.getContext().getResources().getString(R.string.debts_title);
             }
             return null;
+        }
+
+        private void fabChange(int position){
+            switch (position) {
+                case 0:
+                     fabTest.setImageResource(R.drawable.edt_icon);
+                case 1:
+
+                case 2:
+                    fabTest.setImageResource(R.drawable.edt_icon);
+                case 3:
+                    fabTest.setImageResource(R.drawable.edt_icon);
+                case 4:
+                    fabTest.setImageResource(R.drawable.edt_icon);
+            }
         }
     }
 }

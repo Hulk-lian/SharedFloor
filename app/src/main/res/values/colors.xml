@@ -8,4 +8,5 @@
     <color name="colorSplash">#00796b</color>
     <color name="btnPressColor"> #009688</color>
     <color name="btnColor">#4db6ac</color>
+    <color name="colorCharsOverDarkBackground">#ffffff</color>
 </resources>

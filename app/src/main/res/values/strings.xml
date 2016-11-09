@@ -32,5 +32,10 @@
         <!-- test url -->
         <a href="https://www.google.es/">Olvidé mi contraseña</a>
     </string>
+    <string name="home_title">HOGAR</string>
+    <string name="expense_title">Gastos</string>
+    <string name="purchase_title">Lista</string>
+    <string name="clean_title">Limpieza</string>
+    <string name="debts_title">Deudas</string>
 
 </resources>

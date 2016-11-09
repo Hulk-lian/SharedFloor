@@ -9,6 +9,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     >
 
-    <include layout="@layout/home_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include layout="@layout/home_title"
+        android:id="@+id/include" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeLVTusers"
+            android:layout_below="@+id/include"/>
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -64,6 +64,14 @@ public class Selector_activity extends AppCompatActivity {
         iconTest();
 
 
+        //*********clickFAB
+        fabTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -156,7 +164,8 @@ public class Selector_activity extends AppCompatActivity {
             View rootView=null;
             switch (getArguments().getInt(ARG_SECTION_NUMBER)){
                 case 1:
-                    rootView=inflater.inflate(R.layout.fragment_home_fragment,container,false);
+                    rootView=new Home_fragment().onCreateView(inflater,container,savedInstanceState);
+                   // rootView=inflater.inflate(R.layout.fragment_home_fragment,container,false);
                     break;
                 case 2:
                    // rootView=inflater.inflate(R.layout.fragment_expenses_fragment,container,false);
@@ -172,6 +181,7 @@ public class Selector_activity extends AppCompatActivity {
                     rootView=inflater.inflate(R.layout.fragment_debts_fragment,container,false);
                     break;
             }
+
             return rootView;
         }
     }
@@ -198,7 +208,7 @@ public class Selector_activity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
+            // Show 5 total pages.
             return 5;
         }
 
@@ -220,9 +230,10 @@ public class Selector_activity extends AppCompatActivity {
         }
 
         private void fabChange(int position){
+
             switch (position) {
                 case 0:
-                     fabTest.setImageResource(R.drawable.edt_icon);
+
                 case 1:
 
                 case 2:

@@ -8,6 +8,7 @@ import com.jtsw.sharedfloor.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 //clase con datos ficticios para el testeo
 
@@ -32,11 +33,17 @@ public class Expense_listExpenses extends ArrayList<Expense> {
         String[] nombres={"luz","Gas","Agua","Internet","Café","Limpieza"};
         User usuario= new User("Usuarido","eluser69@suspenso.com","upcuo");
         Home choso= new Home("choso de usuarido",usuario);
-        int posRnd;
+        Random posRnd=new Random();
+        int posRandom;
 
         for (int i=0;i<10;i++){
-            posRnd=((int)Math.random()*(0-(nombres.length+1)+0));
-            addExpense(new Expense(nombres[posRnd],Math.random()*100,usuario,choso));
+            posRandom=(int)(posRnd.nextDouble()*nombres.length);
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {e.printStackTrace();}
+
+            addExpense(new Expense(nombres[posRandom],posRandom*10.5,usuario,choso));
         }
     }
 

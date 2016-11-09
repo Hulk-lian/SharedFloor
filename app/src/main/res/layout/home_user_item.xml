@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+
+    <ImageView
+        android:layout_width="@dimen/home_img_user_width"
+        android:layout_height="@dimen/home_img_user_heigth"
+        app:srcCompat="@drawable/usercontest"
+        android:id="@+id/homeIMVUser" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario"
+        android:textSize="@dimen/home_text_sizeUser"
+        android:layout_toRightOf="@+id/homeIMVUser"
+        android:layout_margin="@dimen/home_text_marginUser"
+        android:layout_alignBaseline="@+id/homeIMVUser"
+        android:id="@+id/textView" />
+
+    <!-- el- esta para el testeo-->
+    <ImageButton
+        android:layout_width="@dimen/home_img_delete_width"
+        android:layout_height="@dimen/home_img_delete_height"
+        android:id="@+id/homeIBTNdeleteUser"
+        android:background="@drawable/icono_eliminar"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/home_img_delete_margin_rigth"/>
+
+</RelativeLayout>

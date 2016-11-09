@@ -33,6 +33,10 @@ public class Home {
     public Home(String name,User administrator){
         //id
         this.name=name;
+        this.numberUsers=1;
         this.administrator=administrator;
+    }
+    public void addUsetToHome(){
+        numberUsers++;
     }
 }

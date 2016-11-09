@@ -14,14 +14,14 @@
         app:srcCompat="@drawable/icono_casa200"
         android:id="@+id/homeIMVhome" />
 
-    <TextView
-        android:text="My Home"
-        android:textSize="20dp"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/homeIMVhome"
         android:layout_toEndOf="@+id/homeIMVhome"
         android:layout_alignBottom="@+id/homeIMVhome"
-        android:id="@+id/homeTXVhomeName" />
+        android:text="My Home"
+        android:textSize="@dimen/home_edt_text_size"
+        android:id="@+id/homeEDThomeName"/>
 
 </RelativeLayout>

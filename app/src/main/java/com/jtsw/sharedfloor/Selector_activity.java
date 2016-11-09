@@ -3,6 +3,7 @@ package com.jtsw.sharedfloor;
 import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -22,7 +23,7 @@ public class Selector_activity extends AppCompatActivity {
     //floating buttons
     FloatingActionButton fabTest;
     //***********************************************************//
-
+    ActionBar actionbar;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -38,6 +39,8 @@ public class Selector_activity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+
+    TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,15 +54,15 @@ public class Selector_activity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-
         //***************FAB TEST*************/
         fabTest=(FloatingActionButton)findViewById(R.id.FABoptions);
 
-
-
-
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        //********************TES IMGTABS**********************//
+        iconTest();
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -96,6 +99,9 @@ public class Selector_activity extends AppCompatActivity {
         });
     }
 
+    private void iconTest(){
+      // tabLayout.getTabAt(1).setIcon(R.drawable.icono_casa200);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -179,6 +185,7 @@ public class Selector_activity extends AppCompatActivity {
         public SectionsPagerAdapter(FragmentManager fm) {
 
             super(fm);
+
         }
 
         @Override

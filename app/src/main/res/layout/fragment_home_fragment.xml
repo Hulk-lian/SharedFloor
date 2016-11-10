@@ -16,10 +16,10 @@
     <include layout="@layout/home_title"
         android:id="@+id/include" />
 
-        <ListView
+        <android.support.v7.widget.RecyclerView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/homeLVTusers"
+            android:id="@+id/homeLTVusers"
             android:layout_below="@+id/include"/>
 
     </RelativeLayout>

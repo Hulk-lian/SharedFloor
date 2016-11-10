@@ -24,6 +24,6 @@ public class Home_listUsersHome extends ArrayList<User>{
 
         //constructor
         private Home_listUsersHome(){
-            addUser(new User("Donal","DonalDuck@sheep.com","upcuoeslaclave"));
+            addUser(new User("Haprender","DonalDuck@sheep.com","upcuoeslaclave"));
     }
 }

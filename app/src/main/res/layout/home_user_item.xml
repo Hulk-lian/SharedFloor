@@ -21,7 +21,7 @@
         android:layout_toRightOf="@+id/homeIMVUser"
         android:layout_margin="@dimen/home_text_marginUser"
         android:layout_alignBaseline="@+id/homeIMVUser"
-        android:id="@+id/textView" />
+        android:id="@+id/homeTXVUsername" />
 
     <!-- el- esta para el testeo-->
     <ImageButton

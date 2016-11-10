@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ public class Login_Activity extends AppCompatActivity implements ILogin.msgView 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_);
         mLoginPresenter= new LoginPresenter(this);
+
 
         inicializeComponents();
     }

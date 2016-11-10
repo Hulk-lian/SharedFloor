@@ -8,11 +8,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Selector_activity"
+        <activity
+            android:name=".Selector_activity"
             android:label="@string/title_activity_selector"
             android:theme="@style/AppTheme" />
-
         <activity android:name=".SplashScreen.SplashScreen_activity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
@@ -21,11 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        d
-        <activity android:name=".login.Login_Activity"
-            android:theme="@style/AppTheme.NoActionBar">
 
-        </activity>
+        <activity android:name=".login.Login_Activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".settings.GeneralSetting_activity"
+            android:label="@string/title_activity_general_setting_activity"></activity>
+
+        <activity android:name=".About_activity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
     </application>
 
 </manifest>

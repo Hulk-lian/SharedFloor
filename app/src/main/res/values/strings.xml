@@ -4,10 +4,12 @@
     <!--  -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_selector_fragments_">Shared Floor</string>
-    <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_selector">Shared Floor</string>
     <string name="loginOK">Autentificación correcta</string>
+
+    <!-- Menu items-->
+    <string name="action_settings">Settings</string>
 
     <!-- expenses -->
     <string name="expense_paid">Pagó:</string>
@@ -30,6 +32,7 @@
 
     <string name="loginTXVlinkForget">
         <!-- test url -->
+
         <a href="https://www.google.es/">Olvidé mi contraseña</a>
     </string>
     <string name="home_title">HOGAR</string>
@@ -37,5 +40,8 @@
     <string name="purchase_title">Lista</string>
     <string name="clean_title">Limpieza</string>
     <string name="debts_title">Deudas</string>
+    <string name="title_activity_general_setting_activity">Settings</string>
+    <string name="action_about">Acerca de</string>
+
 
 </resources>

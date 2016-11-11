@@ -22,10 +22,10 @@
     <dimen name="expense_txv_margin">10dp</dimen>
     <dimen name="expense_txv_who_paid">2dp</dimen>
     <dimen name="expense_txv_secondary_size">20dp</dimen>
-    <dimen name="loginIMGVheight">75dp</dimen>
+
 
     <!--Loggin -->
-
+    <dimen name="loginIMGVheight">75dp</dimen>
     <dimen name="login_edt_margin_top">30dp</dimen>
     <dimen name="login_btn_margin_top">10dp</dimen>
 

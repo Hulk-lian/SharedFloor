@@ -12,6 +12,7 @@ public class About_activity extends Activity {
 
     ImageView imgShared;
     String url="https://www.google.es";//the real url is the shared floor webpage
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

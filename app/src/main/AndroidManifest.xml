@@ -12,7 +12,8 @@
             android:name=".Selector_activity"
             android:label="@string/title_activity_selector"
             android:theme="@style/AppTheme" />
-        <activity android:name=".SplashScreen.SplashScreen_activity"
+        <activity
+            android:name=".SplashScreen.SplashScreen_activity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,16 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".login.Login_Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name=".settings.GeneralSetting_activity"
-            android:label="@string/title_activity_general_setting_activity"></activity>
-
-        <activity android:name=".About_activity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-
+        <activity
+            android:name=".login.Login_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".settings.GeneralSetting_activity"
+            android:label="@string/title_activity_general_setting_activity" />
+        <activity
+            android:name=".About_activity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".AddExpense_activity"></activity>
     </application>
 
 </manifest>

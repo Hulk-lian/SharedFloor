@@ -1,13 +1,10 @@
 package com.jtsw.sharedfloor;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -18,13 +15,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
 
 import com.jtsw.sharedfloor.settings.GeneralSetting_activity;
 
 public class Selector_activity extends AppCompatActivity {
 //***************************************************************************************//
     //floating buttons
-    FloatingActionButton fabTest;
+
+
     //***********************************************************//
     ActionBar actionbar;
     /**
@@ -57,8 +58,8 @@ public class Selector_activity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        //***************FAB TEST*************/
-        fabTest=(FloatingActionButton)findViewById(R.id.FABoptions);
+        //***************FAM TEST*************/
+        //homefloatingMenu=(ArcMenu)findViewById(R.id.selector_fam_menuHome);
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -68,12 +69,12 @@ public class Selector_activity extends AppCompatActivity {
 
 
         //*********clickFAB
-        fabTest.setOnClickListener(new View.OnClickListener() {
+      /*  fabTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        });*/
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -139,6 +140,13 @@ public class Selector_activity extends AppCompatActivity {
         startActivity(i);
         return super.onOptionsItemSelected(item);
     }
+
+    ///--------------------------TEST--------------------------------/
+    //************************************************
+    public void clickElementName(View view) {
+        Toast.makeText(this,((TextView)view).getText().toString()+"elimnado",Toast.LENGTH_LONG).show();
+    }
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -239,10 +247,10 @@ public class Selector_activity extends AppCompatActivity {
 
             switch (position) {
                 case 0:
-                    fabTest.show();
+
                     break;
                 case 1:
-                    fabTest.hide();
+
                     break;
                 case 2:
                     break;

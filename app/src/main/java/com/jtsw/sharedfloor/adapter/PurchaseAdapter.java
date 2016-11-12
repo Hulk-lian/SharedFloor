@@ -20,12 +20,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> implements Comparable{
+public class PurchaseAdapter extends ArrayAdapter<PurchaseItem>{
 
     public static final int SORTBYNAME=0;
     public static final int SORTBYTYPE=1;
     boolean cambioNombre=false;
     Context context;
+    boolean ascOrder=false;
     List<PurchaseItem> shoppingList=Purchase_list_elements.getInstance();
 
 
@@ -35,17 +36,17 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> implements Compa
         this.context=context;
     }
 
-    public void sortBy(int type){
-        switch (type){
-            case SORTBYNAME:
-
-                break;
-            case SORTBYTYPE:
-                Collections.sort(shoppingList,PurchaseItem.SORTBYTYPE);
-                break;
-        }
-      //  notifyDataSetChanged();
+    public void sortItems(int type){
+        ascOrder=!ascOrder;
+        Purchase_list_elements.sortBy(type,ascOrder);
+        updateView(Purchase_list_elements.getAllItems());
     }
+
+    private void updateView(List<PurchaseItem> listPurchase){
+        shoppingList.clear();
+        shoppingList.addAll(listPurchase);
+    }
+
     public boolean addItem(PurchaseItem p){
         shoppingList.add(p);
        // notifyDataSetChanged();
@@ -78,12 +79,6 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> implements Compa
         purchaseHolder.txvTypeName.setText(getItem(position).getType().getNameType());
 
         return item;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-
-        return 0;
     }
 
     class PurchaseHolder{

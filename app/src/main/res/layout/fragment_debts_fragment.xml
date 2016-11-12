@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jtsw.sharedfloor.Debts_fragment">
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,10 +63,6 @@
             android:textSize="25dp"
             android:layout_alignLeft="@+id/textView1" />
 
-            <view android:id="@+id/v"
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_below="@id/textView2"/>
 
         <TextView
             android:text="User 2"
@@ -74,25 +71,7 @@
             android:id="@+id/textView16"
             android:layout_marginRight="10dp"
             android:textSize="25dp"
-            android:layout_below="@id/v"/>
-
-        <TextView
-            android:text=" Le debes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/textView16"
-            android:id="@+id/textView17"
-            android:layout_alignBaseline="@id/textView16"
-            android:textSize="25dp"/>
-        <TextView
-            android:text="11€"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/textView17"
-            android:id="@+id/textView11"
-            android:textSize="25dp"
-            android:layout_alignBaseline="@id/textView16"
-            android:layout_marginLeft="10dp"/>
+            android:layout_below="@+id/textView2"/>
 
         <TextView
             android:text="User 3"
@@ -112,6 +91,29 @@
             android:id="@+id/textView19"
             android:textSize="25dp"
             android:layout_alignLeft="@+id/textView17" />
+
+
+        <TextView
+            android:text="Le debes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView17"
+            android:textSize="25dp"
+            android:layout_below="@+id/textView9"
+            android:layout_toRightOf="@+id/textView16"
+            android:layout_toEndOf="@+id/textView16" />
+
+        <TextView
+            android:text="11€"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView17"
+            android:id="@+id/textView11"
+            android:textSize="25dp"
+            android:layout_alignBaseline="@id/textView16"
+            android:layout_below="@id/textView2"
+            android:layout_marginLeft="10dp"/>
+
         <TextView
             android:text="2€"
             android:layout_width="wrap_content"
@@ -124,5 +126,4 @@
             android:layout_alignLeft="@+id/textView11" />
 
     </RelativeLayout>
-
 </FrameLayout>

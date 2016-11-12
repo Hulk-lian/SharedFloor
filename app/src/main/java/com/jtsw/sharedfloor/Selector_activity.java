@@ -153,7 +153,11 @@ public class Selector_activity extends AppCompatActivity {
                 i= new Intent(this,ListTypeElement.class);
                 break;
             case R.id.purchase_action_order_alph:
-                purchaseAdapter.sortBy(PurchaseAdapter.SORTBYNAME);
+                purchaseAdapter.sortItems(PurchaseAdapter.SORTBYNAME);
+                purchaseAdapter.notifyDataSetChanged();
+                break;
+            case R.id.purchase_action_order_typeName:
+                purchaseAdapter.sortItems(PurchaseAdapter.SORTBYTYPE);
                 purchaseAdapter.notifyDataSetChanged();
                 break;
         }

@@ -30,19 +30,4 @@ public class PurchaseItem implements Serializable{
     }
 
 
-
-    public static Comparator<PurchaseItem> SORTBYNAME = new Comparator<PurchaseItem>(){
-
-        @Override
-        public int compare(PurchaseItem p1, PurchaseItem p2) {
-            return p1.getName().toLowerCase().compareTo(p2.getName().toLowerCase());
-        }
-    };
-
-    public static Comparator<PurchaseItem> SORTBYTYPE = new Comparator<PurchaseItem>(){
-        @Override
-        public int compare(PurchaseItem p1, PurchaseItem p2) {
-            return p1.getType().getNameType().toLowerCase().compareTo(p2.getType().getNameType().toLowerCase());
-        }
-    };
 }

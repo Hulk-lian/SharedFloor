@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,16 +16,12 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
 
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="25dp">
 
         <TextView
             android:text="User 1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6"
+            android:id="@+id/textView26"
             android:layout_marginRight="10dp"
             android:textSize="25dp"/>
 
@@ -33,15 +29,15 @@
             android:text="Zone 1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/textView6"
-            android:id="@+id/textView7"
+            android:layout_toRightOf="@id/textView26"
+            android:id="@+id/textView27"
             android:textSize="25dp"/>
         <TextView
             android:text="Salon,pasillo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/textView7"
-            android:id="@+id/textView1"
+            android:layout_toRightOf="@id/textView27"
+            android:id="@+id/textView21"
             android:textSize="25dp"
             android:layout_marginLeft="10dp"/>
 
@@ -49,31 +45,31 @@
             android:text="User 2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textView6"
-            android:id="@+id/textView8"
+            android:layout_below="@id/textView26"
+            android:id="@+id/textView28"
             android:textSize="25dp"/>
 
         <TextView
             android:text="Zone 2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/textView8"
-            android:layout_alignStart="@+id/textView7"
-            android:layout_below="@+id/textView7"
-            android:id="@+id/textView9"
+            android:layout_toRightOf="@id/textView28"
+            android:layout_alignStart="@+id/textView27"
+            android:layout_below="@+id/textView27"
+            android:id="@+id/textView29"
              android:textSize="25dp"
-            android:layout_alignLeft="@+id/textView7" />
+            android:layout_alignLeft="@+id/textView27" />
         <TextView
             android:text="Cocina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView1"
-            android:layout_toRightOf="@id/textView9"
-            android:layout_below="@+id/textView1"
-            android:id="@+id/textView2"
+            android:layout_alignStart="@+id/textView21"
+            android:layout_toRightOf="@id/textView29"
+            android:layout_below="@+id/textView21"
+            android:id="@+id/textView22"
             android:textSize="25dp"
-            android:layout_alignLeft="@+id/textView1" />
+            android:layout_alignLeft="@+id/textView21" />
 
-</RelativeLayout>
+
     </RelativeLayout>
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

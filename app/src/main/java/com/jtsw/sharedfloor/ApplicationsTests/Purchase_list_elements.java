@@ -7,6 +7,7 @@ import com.jtsw.sharedfloor.model.TypeItem;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Random;
 
 public class Purchase_list_elements extends ArrayList<PurchaseItem>{
@@ -24,12 +25,30 @@ public class Purchase_list_elements extends ArrayList<PurchaseItem>{
         add(p);
     }
 
-
-    public static void sortByName()
-    {
-
+    public static List<PurchaseItem> getAllItems(){
+        return  shoppingList;
     }
 
+    public static void sortBy(int type, boolean order){
+
+        if(type==0) {
+            if(order) {
+                Collections.sort(shoppingList, (item, t1) -> item.getName().compareTo(t1.getName()));
+            }
+            else {
+                Collections.sort(shoppingList, (item, t1) -> t1.getName().compareTo(item.getName()));
+            }
+        }
+        else if(type==1){
+            if(order) {
+                Collections.sort(shoppingList, (item, t1) -> item.getType().getNameType().compareTo(t1.getType().getNameType()));
+            }
+            else {
+                Collections.sort(shoppingList, (item, t1) -> t1.getType().getNameType().compareTo(item.getType().getNameType()));
+            }
+        }
+
+    }
     //constructor
     public Purchase_list_elements(){
 

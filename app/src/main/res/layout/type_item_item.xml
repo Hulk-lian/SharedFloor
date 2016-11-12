@@ -12,10 +12,5 @@
         android:text="Type name"
         android:layout_margin="@dimen/typeItemItem_margin"/>
 
-    <view
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/viewheight"
-        android:id="@+id/typeItem_itemAddVIEW"
-        android:layout_below="@+id/typeItem_itemAddTXVnametype"/>
 
 </RelativeLayout>

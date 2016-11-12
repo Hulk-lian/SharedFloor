@@ -36,27 +36,28 @@ public class TypeItemAdapter extends ArrayAdapter<TypeItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View item = convertView;
-        PurchaseHolder purchaseHolder;
+
+        ItemHolder itemHolder;
         if (item == null) {
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            item = inflater.inflate(R.layout.purchase_item, null);
+            item = inflater.inflate(R.layout.type_item_item, null);
 
-            purchaseHolder = new PurchaseHolder();
+           itemHolder= new ItemHolder();
 
-            purchaseHolder.txvTypeName=(TextView) item.findViewById(R.id.purchaseItemTXVtypeelement);
+            itemHolder.txvTypeName=(TextView) item.findViewById(R.id.typeItem_itemAddTXVnametype);
 
-            item.setTag(purchaseHolder);
+            item.setTag(itemHolder);
         } else {
 
-            purchaseHolder=(PurchaseHolder)item.getTag();
+            itemHolder=(ItemHolder)item.getTag();
         }
 
-        purchaseHolder.txvTypeName.setText(getItem(position).getNameType());
+        itemHolder.txvTypeName.setText(getItem(position).getNameType());
 
         return item;
     }
-    class PurchaseHolder {
+    class ItemHolder {
         TextView txvTypeName;
     }
 

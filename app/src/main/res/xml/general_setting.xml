@@ -5,7 +5,7 @@
             android:defaultValue="false"
             android:title="@string/generalSetting_remember_pass"
             android:key="rememberUser"/>
-
     </PreferenceCategory>
+
 
 </PreferenceScreen>

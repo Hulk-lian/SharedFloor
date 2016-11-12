@@ -121,12 +121,13 @@ public class Selector_activity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_selector, menu);
+       getMenuInflater().inflate(R.menu.menu_selector_purchase,menu);
+
         return true;
     }
 
     public void purchaeFABadd(View view) {
        startActivity(new Intent(this,AddItem_activity.class));
-
     }
 
 
@@ -144,6 +145,10 @@ public class Selector_activity extends AppCompatActivity {
                 break;
             case R.id.action_about:
                 i= new Intent(this,About_activity.class);
+                break;
+            case R.id.action_listTypes:
+                i= new Intent(this,ListTypeElement.class);
+                break;
         }
         startActivity(i);
         return super.onOptionsItemSelected(item);

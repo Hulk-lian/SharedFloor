@@ -9,7 +9,7 @@
     <string name="loginOK">Autentificación correcta</string>
 
     <!-- Menu items-->
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configuracion</string>
 
     <!-- expenses -->
     <string name="expense_paid">Pagó:</string>
@@ -46,6 +46,10 @@
     <string name="additem_txv_type">Tipo</string>
     <string name="additem_txv_title">Añadir elemento a la lista</string>
     <string name="additem_txv_name">Nombre del elemento</string>
+    <string name="generalSettinghome_title">Configuracion del hogar</string>
+    <string name="generalSetting_listTypes">Lista de tipos de elementos</string>
+    <string name="action_listTypes">Tipos de elementos</string>
+    <string name="cleanBTNconfig">Configurar</string>
 
 
 </resources>

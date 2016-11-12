@@ -30,7 +30,8 @@
         <activity
             android:name=".About_activity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".AddExpense_activity"></activity>
+        <activity android:name=".AddExpense_activity" />
+        <activity android:name=".AddItem_activity"></activity>
     </application>
 
 </manifest>

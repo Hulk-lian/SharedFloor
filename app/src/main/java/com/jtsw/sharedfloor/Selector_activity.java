@@ -2,6 +2,7 @@ package com.jtsw.sharedfloor;
 
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,15 +20,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.jtsw.sharedfloor.adapter.PurchaseAdapter;
 import com.jtsw.sharedfloor.settings.GeneralSetting_activity;
 
 public class Selector_activity extends AppCompatActivity {
-//***************************************************************************************//
-    //floating buttons
+    //***************************************************************************************//
+        //fab ADditem
+    FloatingActionButton fabAddItem;
 
-
+    private static int ADDITEM=0;
     //***********************************************************//
-    ActionBar actionbar;
+       // Menu menu;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -43,8 +46,12 @@ public class Selector_activity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+    int positionDisplay;
+
+    ActionBar actionbar;
 
     TabLayout tabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,28 +65,21 @@ public class Selector_activity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        //***************FAM TEST*************/
-        //homefloatingMenu=(ArcMenu)findViewById(R.id.selector_fam_menuHome);
-
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        fabAddItem=(FloatingActionButton)findViewById(R.id.purchaseFABaddItem);
+        fabAddItem.hide();
 
         //********************TES IMGTABS**********************//
         iconTest();
 
 
-        //*********clickFAB
-      /*  fabTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });*/
-
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 mSectionsPagerAdapter.fabChange(tab.getPosition());
+                positionDisplay=tab.getPosition();
             }
 
             @Override
@@ -102,6 +102,7 @@ public class Selector_activity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 mSectionsPagerAdapter.fabChange(position);
+                positionDisplay=position;
             }
 
             @Override
@@ -115,14 +116,21 @@ public class Selector_activity extends AppCompatActivity {
       // tabLayout.getTabAt(1).setIcon(R.drawable.icono_casa200);
     }
 
-    @Override
+   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_selector, menu);
         return true;
     }
 
-    @Override
+    public void purchaeFABadd(View view) {
+        startActivityForResult(new Intent(this,AddItem_activity.class),ADDITEM);
+
+
+    }
+/*
+//click on options menu
+@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -135,17 +143,33 @@ public class Selector_activity extends AppCompatActivity {
                 break;
             case R.id.action_about:
                 i= new Intent(this,About_activity.class);
-                break;
         }
         startActivity(i);
         return super.onOptionsItemSelected(item);
     }
+*/
+   /* @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        switch (positionDisplay){
+            case 2:
+                menu.clear();
+                getMenuInflater().inflate(R.menu.menu_selector_purchase,menu);
+                break;
+
+            default:
+                menu.clear();
+                getMenuInflater().inflate(R.menu.menu_selector, menu);
+                break;
+        }
+        return super.onPrepareOptionsMenu(menu);
+    }
+*/
+
+
 
     ///--------------------------TEST--------------------------------/
-    //************************************************
-    public void clickElementName(View view) {
-        Toast.makeText(this,((TextView)view).getText().toString()+"elimnado",Toast.LENGTH_LONG).show();
-    }
+
+///-------------------------------
 
     /**
      * A placeholder fragment containing a simple view.
@@ -186,7 +210,7 @@ public class Selector_activity extends AppCompatActivity {
                     rootView=new Expenses_fragment().onCreateView(inflater,container,savedInstanceState);
                     break;
                 case 3:
-                    rootView=inflater.inflate(R.layout.fragment_purchase_fragment,container,false);
+                    rootView=new Purchase_fragment().onCreateView(inflater,container,savedInstanceState);
                     break;
                 case 4:
                     rootView=inflater.inflate(R.layout.fragment_clean_fragment,container,false);
@@ -209,8 +233,8 @@ public class Selector_activity extends AppCompatActivity {
         public SectionsPagerAdapter(FragmentManager fm) {
 
             super(fm);
-
         }
+
 
         @Override
         public Fragment getItem(int position) {
@@ -247,18 +271,22 @@ public class Selector_activity extends AppCompatActivity {
 
             switch (position) {
                 case 0:
-
+                    fabAddItem.hide();
                     break;
                 case 1:
-
+                    fabAddItem.hide();
                     break;
                 case 2:
+                    fabAddItem.show();
                     break;
                 case 3:
+                    fabAddItem.hide();
                     break;
                 case 4:
+                    fabAddItem.hide();
                     break;
             }
         }
+
     }
 }

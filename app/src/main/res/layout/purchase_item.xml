@@ -2,19 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content" android:layout_height="wrap_content">
 
-    <TextView
+    <EditText
         android:text="Element Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/purchaseItemTXVelemtName"
+        android:id="@+id/purchaseItemEDTelemtName"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_margin="@dimen/item_margin"
         android:textSize="@dimen/item_text_size"
         android:clickable="true"
-        android:onClick="clickElementName"
-        />
+        android:layout_marginLeft="@dimen/item_margin"
+        android:layout_marginTop="@dimen/item_margin"
+        android:layout_marginBottom="@dimen/item_margin"
+        android:layout_toLeftOf="@+id/purchaseItemBTNeditElement"
+        android:layout_toStartOf="@+id/purchaseItemBTNeditElement" />
 
     <Button
         android:layout_width="@dimen/item_img_lateral_size"
@@ -22,8 +24,17 @@
         android:id="@+id/purchaseItemBTNeditElement"
         android:layout_marginRight="20dp"
         android:layout_alignParentRight="true"
-        android:layout_alignBaseline="@id/purchaseItemTXVelemtName"
+        android:layout_alignBaseline="@id/purchaseItemEDTelemtName"
         android:background="@drawable/ic_edit_icon"/>
+
+    <TextView
+        android:text="type name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/purchaseItemEDTelemtName"
+        android:layout_alignStart="@+id/purchaseItemEDTelemtName"
+        android:layout_below="@+id/purchaseItemEDTelemtName"
+        android:id="@+id/purchaseItemTXVtypeelement" />
 
 
 </RelativeLayout>

@@ -1,12 +1,19 @@
 package com.jtsw.sharedfloor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import com.jtsw.sharedfloor.adapter.PurchaseAdapter;
 
 
 /**
@@ -19,7 +26,13 @@ import android.view.ViewGroup;
  */
 public class Purchase_fragment extends Fragment {
 
+    //CODES ADD
+    public final int ADDOK=0;
+        //adapter
+        private PurchaseAdapter purchaseAdapter;
 
+
+    private Selector_activity selector_activity;
 
 
     // TODO: Rename parameter arguments, choose names that match
@@ -64,11 +77,15 @@ public class Purchase_fragment extends Fragment {
         }
     }
 
+    //create the list
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_purchase_fragment, container, false);
+        View view= inflater.inflate(R.layout.fragment_purchase_fragment,container,false);
+        ListView purchaseList=(ListView)view.findViewById(R.id.listItems);
+        purchaseAdapter= new PurchaseAdapter(view.getContext());
+        purchaseList.setAdapter(purchaseAdapter);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -81,14 +98,61 @@ public class Purchase_fragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+        selector_activity=(Selector_activity)context;
     }
 
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.menu_selector_purchase,menu);
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+
+                return false;
+            }
+        });
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent=null;
+        switch (item.getItemId()) {
+
+            case R.id.purchase_action_add_item:
+                addItem(intent);
+
+                break;
+
+            case R.id.purchase_action_order_alph:
+                //dao
+               // adapterRecycler.getAlphSortedProducts();
+
+                break;
+
+            case R.id.purchase_action_order_typeName:
+                // adapterRecycler.getAlphSortedProducts();
+                break;
+
+            case R.id.action_about:
+                intent =new Intent(getContext(),About_activity.class);
+                break;
+            case R.id.action_settings:
+                intent =new Intent(getContext(),About_activity.class);
+                break;
+        }
+        if(intent!=null){
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public void addItem(Intent intent){
+        startActivityForResult(intent,ADDOK);
+
+    }
     @Override
     public void onDetach() {
         super.onDetach();

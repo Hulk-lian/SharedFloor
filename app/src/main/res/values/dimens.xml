@@ -25,7 +25,7 @@
 
 
     <!--Loggin -->
-    <dimen name="loginIMGVheight">75dp</dimen>
+    <dimen name="loginIMGVheight">100dp</dimen>
     <dimen name="login_edt_margin_top">30dp</dimen>
     <dimen name="login_btn_margin_top">10dp</dimen>
 
@@ -50,6 +50,7 @@
     <dimen name="home_img_delete_height">30dp</dimen>
     <dimen name="home_img_delete_margin_rigth">15dp</dimen>
     <dimen name="home_edt_text_size">20dp</dimen>
+    <dimen name="additem_text_size">25dp</dimen>
 
 
 </resources>

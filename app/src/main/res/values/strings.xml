@@ -42,6 +42,9 @@
     <string name="debts_title">Deudas</string>
     <string name="title_activity_general_setting_activity">Settings</string>
     <string name="action_about">Acerca de</string>
+    <string name="additem_btn_ok">Añadir</string>
+    <string name="additem_txv_type">Tipo</string>
+    <string name="additem_txv_title">Añadir elemento a la lista</string>
 
 
 </resources>

@@ -30,7 +30,6 @@ public class Selector_activity extends AppCompatActivity {
         //fab ADditem
     FloatingActionButton fabAddItem;
 
-    private static int ADDITEM=0;
     //***********************************************************//
        // Menu menu;
     /**
@@ -126,18 +125,10 @@ public class Selector_activity extends AppCompatActivity {
     }
 
     public void purchaeFABadd(View view) {
-       startActivityForResult(new Intent(this,AddItem_activity.class),ADDITEM);
+       startActivity(new Intent(this,AddItem_activity.class));
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode==RESULT_OK){
-            PurchaseAdapter adapter= new PurchaseAdapter(this);
-            adapter.addItem ((PurchaseItem) data.getExtras().get("elemento"));
-        }
-    }
 
     //click on options menu
 @Override

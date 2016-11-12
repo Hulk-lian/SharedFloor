@@ -30,6 +30,8 @@ public class Purchase_fragment extends Fragment {
 
     //CODES ADD
     public final int ADDOK=0;
+
+    private ListView purchaseList;
         //adapter
         private PurchaseAdapter purchaseAdapter;
 
@@ -84,7 +86,7 @@ public class Purchase_fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_purchase_fragment,container,false);
-        ListView purchaseList=(ListView)view.findViewById(R.id.listItems);
+        purchaseList=(ListView)view.findViewById(R.id.listItems);
         purchaseAdapter= new PurchaseAdapter(view.getContext());
         purchaseList.setAdapter(purchaseAdapter);
         return view;
@@ -115,13 +117,6 @@ public class Purchase_fragment extends Fragment {
         menu.clear();
         inflater.inflate(R.menu.menu_selector_purchase,menu);
         super.onCreateOptionsMenu(menu, inflater);
-        menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-
-                return false;
-            }
-        });
 
     }
 

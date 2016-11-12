@@ -15,7 +15,6 @@ import com.jtsw.sharedfloor.adapter.TypeItemAdapter;
 import com.jtsw.sharedfloor.model.PurchaseItem;
 import com.jtsw.sharedfloor.model.TypeItem;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,15 +28,10 @@ public class AddItem_activity extends AppCompatActivity {
     ArrayAdapter<CharSequence> adapterForSpiner;
     List typesNames;
 
-    Intent i;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item_activity);
-
-        i= getIntent();
 
         typeItemAdapter=new TypeItemAdapter(this);
         typesNames= new ArrayList();
@@ -62,8 +56,9 @@ public class AddItem_activity extends AppCompatActivity {
 
         if(edtName.getText().toString().trim().length()>0){
             PurchaseItem p=new PurchaseItem(edtName.getText().toString(),new TypeItem(spinner.getSelectedItem().toString()));
-            i.putExtra("element",p);
-            setResult(RESULT_OK,i);
+            PurchaseAdapter adapter=new PurchaseAdapter(v.getContext());
+            adapter.addItem(p);
+            adapter.notifyDataSetChanged();
             finish();
         }
         else{

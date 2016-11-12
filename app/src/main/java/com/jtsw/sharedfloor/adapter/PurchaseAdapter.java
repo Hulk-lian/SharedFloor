@@ -48,7 +48,7 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> {
     }
     public boolean addItem(PurchaseItem p){
         shoppingList.add(p);
-        notifyDataSetChanged();
+       // notifyDataSetChanged();
         return true;
     }
     @NonNull

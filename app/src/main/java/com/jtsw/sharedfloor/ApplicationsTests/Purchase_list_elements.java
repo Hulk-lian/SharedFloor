@@ -5,6 +5,8 @@ import com.jtsw.sharedfloor.model.PurchaseItem;
 import com.jtsw.sharedfloor.model.TypeItem;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Random;
 
 public class Purchase_list_elements extends ArrayList<PurchaseItem>{
@@ -20,6 +22,12 @@ public class Purchase_list_elements extends ArrayList<PurchaseItem>{
 
     public void addItem(PurchaseItem p){
         add(p);
+    }
+
+
+    public static void sortByName()
+    {
+
     }
 
     //constructor

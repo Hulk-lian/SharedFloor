@@ -17,9 +17,10 @@ import com.jtsw.sharedfloor.model.TypeItem;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> {
+public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> implements Comparable{
 
     public static final int SORTBYNAME=0;
     public static final int SORTBYTYPE=1;
@@ -35,16 +36,15 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> {
     }
 
     public void sortBy(int type){
-        //por ahora solo esta ordenado por cantidad(amount)
         switch (type){
             case SORTBYNAME:
-                Collections.sort(shoppingList,PurchaseItem.SORTBYNAME);
+
                 break;
             case SORTBYTYPE:
                 Collections.sort(shoppingList,PurchaseItem.SORTBYTYPE);
                 break;
         }
-        notifyDataSetChanged();
+      //  notifyDataSetChanged();
     }
     public boolean addItem(PurchaseItem p){
         shoppingList.add(p);
@@ -79,6 +79,13 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> {
 
         return item;
     }
+
+    @Override
+    public int compareTo(Object o) {
+
+        return 0;
+    }
+
     class PurchaseHolder{
         EditText edtItemName;
         TextView txvTypeName;

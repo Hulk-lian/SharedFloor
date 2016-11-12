@@ -30,6 +30,8 @@ public class Selector_activity extends AppCompatActivity {
         //fab ADditem
     FloatingActionButton fabAddItem;
 
+    private PurchaseAdapter purchaseAdapter;
+
     //***********************************************************//
        // Menu menu;
     /**
@@ -57,6 +59,7 @@ public class Selector_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selector);
+        purchaseAdapter= new PurchaseAdapter(this);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -149,27 +152,35 @@ public class Selector_activity extends AppCompatActivity {
             case R.id.action_listTypes:
                 i= new Intent(this,ListTypeElement.class);
                 break;
+            case R.id.purchase_action_order_alph:
+                purchaseAdapter.sortBy(PurchaseAdapter.SORTBYNAME);
+                purchaseAdapter.notifyDataSetChanged();
+                break;
         }
-        startActivity(i);
+            if(i!=null) {
+                startActivity(i);
+            }
         return super.onOptionsItemSelected(item);
     }
 
-   /* @Override
+    @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        switch (positionDisplay){
+        switch (mViewPager.getCurrentItem()){
             case 2:
-                menu.clear();
-                getMenuInflater().inflate(R.menu.menu_selector_purchase,menu);
+                menu.findItem(R.id.purchase_action_add_item).setVisible(true);
+                menu.findItem(R.id.purchase_action_order_alph).setVisible(true);
+                menu.findItem(R.id.purchase_action_order_typeName).setVisible(true);
                 break;
 
             default:
-                menu.clear();
-                getMenuInflater().inflate(R.menu.menu_selector, menu);
+                menu.findItem(R.id.purchase_action_add_item).setVisible(false);
+                menu.findItem(R.id.purchase_action_order_alph).setVisible(false);
+                menu.findItem(R.id.purchase_action_order_typeName).setVisible(false);
                 break;
         }
         return super.onPrepareOptionsMenu(menu);
     }
-*/
+
 
 
 

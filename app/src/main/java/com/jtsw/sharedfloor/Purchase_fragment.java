@@ -108,54 +108,17 @@ public class Purchase_fragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        setHasOptionsMenu(true);
+
     }
 
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.clear();
         inflater.inflate(R.menu.menu_selector_purchase,menu);
         super.onCreateOptionsMenu(menu, inflater);
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent=null;
-        switch (item.getItemId()) {
-
-            case R.id.purchase_action_add_item:
-                addItem(intent);
-
-                break;
-
-            case R.id.purchase_action_order_alph:
-                //dao
-               // adapterRecycler.getAlphSortedProducts();
-
-                break;
-
-            case R.id.purchase_action_order_typeName:
-                // adapterRecycler.getAlphSortedProducts();
-                break;
-
-            case R.id.action_about:
-                intent =new Intent(getContext(),About_activity.class);
-                break;
-            case R.id.action_settings:
-                intent =new Intent(getContext(),About_activity.class);
-                break;
-        }
-        if(intent!=null){
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    public void addItem(Intent intent){
-        startActivityForResult(intent,ADDOK);
-
-    }
     @Override
     public void onDetach() {
         super.onDetach();

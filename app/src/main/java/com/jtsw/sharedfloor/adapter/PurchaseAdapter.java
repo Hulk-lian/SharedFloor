@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.jtsw.sharedfloor.ApplicationsTests.Purchase_list_elements;
 import com.jtsw.sharedfloor.R;
 import com.jtsw.sharedfloor.model.PurchaseItem;
+import com.jtsw.sharedfloor.model.TypeItem;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,7 +46,11 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem> {
         }
         notifyDataSetChanged();
     }
-
+    public boolean addItem(PurchaseItem p){
+        shoppingList.add(p);
+        notifyDataSetChanged();
+        return true;
+    }
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

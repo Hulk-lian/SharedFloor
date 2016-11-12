@@ -5,4 +5,5 @@
     <string name="empty_pass">Campo de Contraseña está vacio</string>
     <string name="login_error">Autentificacion Incorrecta</string>
     <string name="user_not_found">El usuario no existe</string>
+    <string name="no_item_name">El nombre del elemento no puede estar vacío</string>
 </resources>

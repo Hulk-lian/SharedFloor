@@ -45,6 +45,7 @@
     <string name="additem_btn_ok">Añadir</string>
     <string name="additem_txv_type">Tipo</string>
     <string name="additem_txv_title">Añadir elemento a la lista</string>
+    <string name="additem_txv_name">Nombre del elemento</string>
 
 
 </resources>

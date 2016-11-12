@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 
 import com.jtsw.sharedfloor.adapter.PurchaseAdapter;
+import com.jtsw.sharedfloor.model.PurchaseItem;
+import com.jtsw.sharedfloor.model.TypeItem;
 import com.jtsw.sharedfloor.settings.GeneralSetting_activity;
 
 public class Selector_activity extends AppCompatActivity {
@@ -124,12 +126,20 @@ public class Selector_activity extends AppCompatActivity {
     }
 
     public void purchaeFABadd(View view) {
-        startActivityForResult(new Intent(this,AddItem_activity.class),ADDITEM);
-
+       startActivityForResult(new Intent(this,AddItem_activity.class),ADDITEM);
 
     }
-/*
-//click on options menu
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode==RESULT_OK){
+            PurchaseAdapter adapter= new PurchaseAdapter(this);
+            adapter.addItem ((PurchaseItem) data.getExtras().get("elemento"));
+        }
+    }
+
+    //click on options menu
 @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -147,7 +157,7 @@ public class Selector_activity extends AppCompatActivity {
         startActivity(i);
         return super.onOptionsItemSelected(item);
     }
-*/
+
    /* @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         switch (positionDisplay){

@@ -22,4 +22,9 @@ public class TypeItem {
         nameType= name;
 
     }
+
+    @Override
+    public String toString() {
+        return nameType;
+    }
 }

@@ -1,8 +1,9 @@
 package com.jtsw.sharedfloor.model;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class PurchaseItem {
+public class PurchaseItem implements Serializable{
     private String id;
     private String name;
     private TypeItem type;

@@ -51,6 +51,9 @@
     <dimen name="home_img_delete_margin_rigth">15dp</dimen>
     <dimen name="home_edt_text_size">20dp</dimen>
     <dimen name="additem_text_size">25dp</dimen>
+    <dimen name="typeItemItem_text_size">25dp</dimen>
+    <dimen name="typeItemItem_margin">15dp</dimen>
+    <dimen name="viewheight">1dp</dimen>
 
 
 </resources>

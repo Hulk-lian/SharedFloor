@@ -30,7 +30,6 @@ public class Home_fragment extends Fragment {
 
     //controls
     EditText medtHomeName;
-    FloatingActionButton fabChangeHomeName;
 
     //TODO: recycler and adapter
     private RecyclerView recyclerView;

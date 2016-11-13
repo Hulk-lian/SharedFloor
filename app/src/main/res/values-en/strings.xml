@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shared Floor</string>
+    <string name="EUR">€</string>
+    <string name="USD">$</string>
+    <string name="action_about">About us</string>
+    <string name="action_listTypes">Element types</string>
+    <string name="action_settings">Setting</string>
+    <string name="additem_btn_ok">Add</string>
+    <string name="additem_txv_name">Element name</string>
+    <string name="additem_txv_title">Add element</string>
+    <string name="additem_txv_type">Type</string>
+    <string name="cleanBTNconfig">Config</string>
+    <string name="clean_title">Clean</string>
+    <string name="debts_title">Debts</string>
+    <string name="empty_pass">password field is empty</string>
+    <string name="empty_user">user field is empty</string>
+    <string name="expense_for_user">Per user</string>
+    <string name="expense_paid">paid</string>
+    <string name="expense_per_user_paid_text">Per user</string>
+    <string name="expense_title">Expenses</string>
+    <string name="generalSetting_listTypes">List of types of element</string>
+    <string name="generalSetting_remember_pass">Remember password</string>
+    <string name="generalSetting_title">account configuration</string>
+    <string name="generalSettinghome_title">home configuration</string>
+    <string name="home_title">HOME</string>
+    <string name="loginBTNOK">Login</string>
+    <string name="loginCHBRemember">Remember</string>
+    <string name="loginEDThintPassword">Password</string>
+    <string name="loginEDThintUsername">User</string>
+    <string name="loginOK">Sucess login</string>
+    <string name="loginTXVForget">Forget my password</string>
+    <string name="loginTXVRegister">Register</string>
+    <string name="login_error">Incorrect Autentication</string>
+    <string name="no_item_name">The field name cant be empty</string>
+    <string name="pass_short">Password so short, must be at least 8 characters</string>
+    <string name="purchase_title">List</string>
+    <string name="user_not_found">The user not exists</string>
+    <string name="title_activity_selector_fragments_">Shared Floor</string>
+    <string name="title_activity_selector">Sharef Floor</string>
+    <string name="title_activity_general_setting_activity">Settings</string>
+</resources>

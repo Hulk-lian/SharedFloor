@@ -27,7 +27,7 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem>{
     boolean cambioNombre=false;
     Context context;
     boolean ascOrder=false;
-    List<PurchaseItem> shoppingList=Purchase_list_elements.getInstance();
+    List<PurchaseItem> shoppingList=new ArrayList<PurchaseItem>();
 
 
     public PurchaseAdapter(Context context) {

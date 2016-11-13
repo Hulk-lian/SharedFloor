@@ -33,18 +33,18 @@ public class Purchase_list_elements extends ArrayList<PurchaseItem>{
 
         if(type==0) {
             if(order) {
-                Collections.sort(shoppingList, (item, t1) -> item.getName().compareTo(t1.getName()));
+                Collections.sort(shoppingList, (item, t1) -> item.getName().toLowerCase().compareTo(t1.getName().toLowerCase()));
             }
             else {
-                Collections.sort(shoppingList, (item, t1) -> t1.getName().compareTo(item.getName()));
+                Collections.sort(shoppingList, (item, t1) -> t1.getName().toLowerCase().compareTo(item.getName().toLowerCase()));
             }
         }
         else if(type==1){
             if(order) {
-                Collections.sort(shoppingList, (item, t1) -> item.getType().getNameType().compareTo(t1.getType().getNameType()));
+                Collections.sort(shoppingList, (item, t1) -> item.getType().getNameType().toLowerCase().compareTo(t1.getType().getNameType().toLowerCase()));
             }
             else {
-                Collections.sort(shoppingList, (item, t1) -> t1.getType().getNameType().compareTo(item.getType().getNameType()));
+                Collections.sort(shoppingList, (item, t1) -> t1.getType().getNameType().toLowerCase().compareTo(item.getType().getNameType().toLowerCase()));
             }
         }
 

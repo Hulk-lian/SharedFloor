@@ -130,7 +130,8 @@ public class Selector_activity extends AppCompatActivity {
     }
 
     public void purchaeFABadd(View view) {
-       startActivity(new Intent(this,AddItem_activity.class));
+
+        startActivity(new Intent(this,AddItem_activity.class));
     }
 
 

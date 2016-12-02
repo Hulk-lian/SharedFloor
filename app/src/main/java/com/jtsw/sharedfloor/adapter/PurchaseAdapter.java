@@ -32,7 +32,7 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem>{
 
     public PurchaseAdapter(Context context) {
         super(context, R.layout.expense_expense_item, Purchase_list_elements.getInstance());
-
+        shoppingList.addAll(Purchase_list_elements.getInstance());
         this.context=context;
     }
 
@@ -45,6 +45,7 @@ public class PurchaseAdapter extends ArrayAdapter<PurchaseItem>{
     private void updateView(List<PurchaseItem> listPurchase){
         shoppingList.clear();
         shoppingList.addAll(listPurchase);
+        notifyDataSetChanged();
     }
 
     public boolean addItem(PurchaseItem p){

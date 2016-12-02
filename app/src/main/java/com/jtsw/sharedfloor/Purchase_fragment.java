@@ -33,7 +33,7 @@ public class Purchase_fragment extends Fragment {
 
     private ListView purchaseList;
         //adapter
-        private PurchaseAdapter purchaseAdapter;
+    private PurchaseAdapter purchaseAdapter;
 
 
     private Selector_activity selector_activity;
@@ -92,7 +92,6 @@ public class Purchase_fragment extends Fragment {
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);

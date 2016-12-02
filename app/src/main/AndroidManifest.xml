@@ -11,16 +11,18 @@
         <activity
             android:name=".Selector_activity"
             android:label="@string/title_activity_selector"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".SplashScreen.SplashScreen_activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashScreen.SplashScreen_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <!-- main tiene que ir aqui-->
         </activity>
         <activity
             android:name=".login.Login_Activity"
